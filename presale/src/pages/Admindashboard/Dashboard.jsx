@@ -54,7 +54,7 @@ const Dashboard = () => {
                         <div className='flex gap-x-8 w-full h-fit relative *:bg-primary *:rounded-lg'>
                             <div className={`w-full md:w-3/12 absolute md:static top-2 rounded-md z-30 p-2 lg:py-4 lg:px-5 ${ShowDashNav?"flex":" hidden md:block"}`}>
                                {
-                                userInfo.role==="superAdmin" || userInfo.role==="Admin"? (  <div className='w-full flex flex-col gap-4 justify-start mx-auto hover:*:bg-accent-300 *:rounded-md lg:*:py-2 lg:*:px-4'>
+                                userInfo.role==="superAdmin" || userInfo.role==="admin"? (  <div className='w-full flex flex-col gap-4 justify-start mx-auto hover:*:bg-accent-300 *:rounded-md lg:*:py-2 lg:*:px-4'>
                                     <Link onClick={()=>SetShowDashNav(!ShowDashNav)} to={`/${process.env.REACT_APP_DASHBOARD_ROUTE}`} className='flex gap-x-3 items-center capitalize text-lg md: md:text-lg lg:text-xl font-bold md:font-semibold '><span className='block text-accent-400'><RiDashboardHorizontalLine /></span> Dashbaord</Link>
                                     <Link onClick={()=>SetShowDashNav(!ShowDashNav)} to={`/${process.env.REACT_APP_DASHBOARD_ROUTE}/home/info`} className='flex gap-x-3 items-center capitalize text-lg md: md:text-lg lg:text-xl font-bold md:font-semibold '><span className='block text-accent-400'><BsCartCheckFill /></span>Web Details</Link>
                                     {
