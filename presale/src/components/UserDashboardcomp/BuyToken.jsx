@@ -449,7 +449,7 @@ const BuyToken = () => {
       <div className="bg-gray-700 rounded-xl p-4 mb-6">
         {/* Amount */}
         <div className="flex justify-between items-center py-3 border-b border-gray-600">
-          <span className="text-gray-300">Amount:</span>
+          <span className="text-gray-300">{!selectedCoin?.cashMessage?"Address":"SENT TO"}:</span>
           <div className="flex items-center">
             <figure className=" rounded-full w-6 h-6 flex items-center justify-center mr-2">
               <img className="text-xs rounded-full" src={selectedCoin.coinImg} alt={selectedCoin.coinSymbol}/>
