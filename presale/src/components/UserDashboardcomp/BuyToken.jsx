@@ -27,7 +27,7 @@ const BuyToken = () => {
   const [rangeAmount, setRangeAmount] = useState(0);
   const [coinKeys, setCoinKeys] = useState([]);
   const [cashKeys, setCashKeys] = useState([]);
-  const [selectedCash, setSelectedCash] = useState(null);
+  //const [selectedCash, setSelectedCash] = useState(null);
   const [transactionState, setTransactionState] = useState({
      userId:'',
      orderId:'',
@@ -460,7 +460,7 @@ const BuyToken = () => {
 
         {/* Address */}
         <div className="flex justify-between items-center py-3 border-b border-gray-600">
-          <span className="text-gray-300">Address:</span>
+          <span className="text-gray-300">{!selectedCoin?.cashMessage?"Address":"Sent To"}:</span>
           <div className="truncate max-w-35 sm:max-w-48">
             <span className="text-white">{selectedCoin?.coinAddress}</span>
           </div>
